@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:navigationBarColor">@color/red</item>
+    </style>
+
+    <string name="typefaceLightPath">fonts/Heebo-Light.ttf</string>
+    <string name="typefaceMedPath">fonts/Heebo-Medium.ttf</string>
+    <string name="typefaceBoldPath">fonts/Heebo-Bold.ttf</string>
+
+    <style name="TextAppearance.FontPathLight" parent="android:TextAppearance">
+        <item name="fontPath">@string/typefaceLightPath</item>
+    </style>
+
+    <style name="TextAppearance.FontPathBold" parent="android:TextAppearance">
+        <item name="fontPath">@string/typefaceBoldPath</item>
+    </style>
+
+    <style name="TextAppearance.FontPathMedium" parent="android:TextAppearance">
+    <item name="fontPath">@string/typefaceMedPath</item>
+</style>
+
+</resources>

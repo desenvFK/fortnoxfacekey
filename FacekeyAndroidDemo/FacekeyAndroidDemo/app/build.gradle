@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.anyvision.facekeyexample"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 6
+        versionName "1.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "faceKeySample"
+            def SEP = "_"
+/*            if(variant.productFlavors[0].name) {
+                def flavor = variant.productFlavors[0].name
+            }*/
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionName
+            def date = new Date()
+            def formattedDate = date.format('ddMMyy_HHmm')
+
+            def newApkName = project + SEP + /*flavor + SEP +*/buildType + SEP + version + SEP + formattedDate + ".apk"
+            outputFileName = new File(newApkName)
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:appcompat-v7:26.1.0'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-annotations:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.pixplicity.easyprefs:library:1.9.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'dev.dworks.libs:volleyplus:0.1.4'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.2.0'
+    implementation 'com.xw.repo:bubbleseekbar:3.10-lite'
+    implementation 'com.anyvision.facekey:facekey:3.4.1'
+    implementation 'com.otaliastudios:cameraview:2.2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}
+
+

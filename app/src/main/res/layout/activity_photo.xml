@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_dark"
+    android:keepScreenOn="true">
+
+    <com.anyvision.facekeyexample.views.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/scan_face_bg"
+        android:layout_alignLeft="@+id/scan_face_bg"
+        android:layout_alignRight="@+id/scan_face_bg"
+        android:background="@color/transparent_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/scan_face_bg"
+        android:layout_alignRight="@+id/scan_face_bg"
+        android:layout_below="@+id/scan_face_bg"
+        android:background="@color/transparent_gray" />
+
+    <FrameLayout
+        android:id="@+id/scan_face_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <View
+            android:id="@+id/scanner"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignLeft="@+id/scan_face_bg"
+            android:layout_alignRight="@+id/scan_face_bg"
+            android:layout_alignTop="@id/scan_face_bg"
+            android:background="@drawable/scanner"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@drawable/white_rectangle"
+            android:src="@drawable/scan_id_bg" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scan_face_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="0.7"
+        android:text="@string/put_id_text"
+        android:textAppearance="@style/TextAppearance.FontPathLight"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/slow_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/scan_face_bg"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:layoutDirection="rtl"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_connection"/>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="8dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/scan_face_bg"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.7"
+            android:text="@string/slow_connection"
+            android:textAppearance="@style/TextAppearance.FontPathLight"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_scan" />
+</RelativeLayout>

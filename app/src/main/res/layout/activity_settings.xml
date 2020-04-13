@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_sky"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:context="com.anyvision.facekeyexample.activities.SettingsActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/signup_bg" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo_fk_2015" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/threshold_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/threshold"
+                android:textColor="@color/gray"
+                android:textSize="18dp" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/threshold_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/threshold_label"
+                android:layout_marginTop="10dp"
+                app:bsb_bubble_color="@color/red_dark"
+                app:bsb_bubble_text_color="@android:color/white"
+                app:bsb_max="100"
+                app:bsb_min="0"
+                app:bsb_second_track_color="@color/red"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@color/gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/vid_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vid_time"
+                android:textColor="@color/gray"
+                android:textSize="18dp" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/vid_time_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vid_time_label"
+                android:layout_marginTop="10dp"
+                app:bsb_bubble_color="@color/red_dark"
+                app:bsb_min="1"
+                app:bsb_max="5"
+                app:bsb_section_count="4"
+                app:bsb_auto_adjust_section_mark="true"
+                app:bsb_bubble_text_color="@android:color/white"
+                app:bsb_second_track_color="@color/red"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_thumb_text="true"
+                app:bsb_seek_by_section="true"
+                app:bsb_track_color="@color/gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/compression_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/img_quality"
+                android:textColor="@color/gray"
+                android:textSize="18dp" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:id="@+id/compression_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/compression_label"
+                android:layout_marginTop="10dp"
+                app:bsb_bubble_color="@color/red_dark"
+                app:bsb_bubble_text_color="@android:color/white"
+                app:bsb_max="100"
+                app:bsb_min="0"
+                app:bsb_second_track_color="@color/red"
+                app:bsb_section_text_position="bottom_sides"
+                app:bsb_show_thumb_text="true"
+                app:bsb_track_color="@color/gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/sesame_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sesame_url"
+                android:inputType="textUri"
+                android:textColor="@color/gray"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/server_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/server_url"
+                android:inputType="textUri"
+                android:textColor="@color/gray"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spType"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/server_url"
+                android:spinnerMode="dialog"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@+id/spType"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="#65C734"
+                android:text="Enviar"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

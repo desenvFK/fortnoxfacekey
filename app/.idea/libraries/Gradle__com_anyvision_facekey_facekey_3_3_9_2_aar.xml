@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.anyvision.facekey:facekey:3.3.9.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facekey-3.3.9.2.aar/d92587192ffe7e32e7017494feada2f0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facekey-3.3.9.2.aar/d92587192ffe7e32e7017494feada2f0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

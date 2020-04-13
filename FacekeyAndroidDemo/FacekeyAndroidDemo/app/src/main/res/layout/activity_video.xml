@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red_dark"
+    android:keepScreenOn="true">
+
+    <com.anyvision.facekeyexample.views.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/scan_face_bg"
+        android:background="@color/transparent_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/scan_face_bg"
+        android:background="@color/transparent_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/scan_face_bg"
+        android:layout_alignLeft="@+id/scan_face_bg"
+        android:layout_alignRight="@+id/scan_face_bg"
+        android:background="@color/transparent_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/scan_face_bg"
+        android:layout_alignRight="@+id/scan_face_bg"
+        android:layout_below="@+id/scan_face_bg"
+        android:background="@color/transparent_gray" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/scan_face_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="00:05"
+        android:textAppearance="@style/TextAppearance.FontPathBold"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/scan_face_bg"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true">
+
+        <View
+            android:id="@+id/scanner"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignLeft="@+id/scan_face_bg"
+            android:layout_alignRight="@+id/scan_face_bg"
+            android:layout_alignTop="@id/scan_face_bg"
+            android:background="@drawable/scanner"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/white_rectangle"
+            android:scaleType="fitXY"
+            android:padding="20dp"
+            android:src="@drawable/face" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scan_face_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:lineSpacingMultiplier="0.7"
+        android:text="@string/put_face_text"
+        android:textAppearance="@style/TextAppearance.FontPathLight"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:src="@drawable/ic_scan" />
+
+</RelativeLayout>

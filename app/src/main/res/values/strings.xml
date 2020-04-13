@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Facekey Sesame 1</string>
+
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+
+    <string name="could_not_connect">Could not connect to server!</string>
+    <string name="pipe_inactive">Pipe is inactive</string>
+
+    <string name="threshold">Threshold</string>
+    <string name="vid_time">Video time</string>
+    <string name="img_quality">Image quality</string>
+    <string name="do_delete">Delete database</string>
+    <string name="do_survey">Save result for net improvement</string>
+    <string name="server_url">Server URL</string>
+
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="id_number">Id number</string>
+    <string name="date_of_issue">Date of issue</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="issue_state_name">Issue state</string>
+    <string name="next">Next step</string>
+    <string name="put_id_text">Align your ID with the template and touch the scan button</string>
+    <string name="put_face_text">Align your face with the template and touch the scan button</string>
+    <string name="result_failure_network">Authentication failed because of a bad internet connection. Please try again.</string>
+    <string name="result_failure_no_match">ID and video do not match. Please try again.</string>
+    <string name="result_failure_no_face">No face found in the video. Please try again.</string>
+    <string name="result_failure_not_live">Fraud detected. Please try again.</string>
+    <string name="result_success">Registro realizado com sucesso!</string>
+    <string name="authenticating">Authenticating, please wait</string>
+    <string name="try_again">Tente novamente</string>
+    <string name="video_upload_failed">Video upload failed</string>
+    <string name="video_process_failed">Video processing failed</string>
+    <string name="no_faces_in_video">No face found in video</string>
+    <string name="choose_face">Please choose the relevant face to ID.</string>
+    <string name="inst_1">Please make sure you are in a well lit location.</string>
+    <string name="inst_2">Please make sure there are not TV, tablet ot computer screens in the background.</string>
+    <string name="cont">Continuar</string>
+    <string name="back">Voltar</string>
+    <string name="slow_connection">Slow connection… This can take up to a minute</string>
+    <string name="scanning_id_text">Thank you, we have taken the picture. No need to hold the ID any longer</string>
+    <string name="survey_text_real">No fraud attempt</string>
+    <string name="survey_text_fake">Fraud attempt</string>
+
+    <string name="name_error">Mandatory field</string>
+
+    <string name="align_face">Please align your face with the frame</string>
+    <string name="no_face_in_video">Cannot detect face. Please align your face</string>
+    <string name="too_many_in_video">Multiple faces detected. Please Try again</string>
+    <string name="face_too_small">Please bring your phone closer to your face</string>
+    <string name="face_too_large">Please back away your phone from your face</string>
+    <string name="processing">Almost done!</string>
+    <string name="get_ready">Get ready!</string>
+    <string name="voltar_menu">Voltar ao Menu</string>
+    <string name="writing_permission_alert_title">Requierd permission</string>
+    <string name="writing_permission_alert_message">Please give this permission,\nThanks </string>
+    <string name="default_notification_channel_id"/>
+    <string name="default_notification_channel_name">Notificação</string>
+    <string name="fcm_token">FCM Token: %s</string>
+    <string name="sesame_url">Anyvision URL</string>
+
+</resources>
